@@ -23,13 +23,13 @@ Windows: https://github.com/UB-Mannheim/tesseract/wiki
       import pytesseract
       from PIL import Image
 
-      # ตั้งค่าที่อยู่ของ tesseract.exe ตรงนี้นะใน '####'
+      //ตั้งค่าที่อยู่ของ tesseract.exe ตรงนี้นะใน '####'
       pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-      # เปิดภาพและแปลงเป็นข้อความภาษาไทย
+      //เปิดภาพและแปลงเป็นข้อความภาษาไทย
       img = Image.open('images/example.png')
 
-      # ตรง lang='' สามารถกำหนดได้ว่าจะเอาภาษาอะไร ถ้าจะเอาอังกฤษอย่างเดียวให้แก้ตรง 'tha' เป็น 'eng'
-      # ถ้า ไทย อย่างเดียว เป็น 'tha' ถ้าเอาทั้งสองเป็น 'eng+tha'
+      //ตรง lang='' สามารถกำหนดได้ว่าจะเอาภาษาอะไร ถ้าจะเอาอังกฤษอย่างเดียวให้แก้ตรง 'tha' เป็น 'eng'
+      //ถ้า ไทย อย่างเดียว เป็น 'tha' ถ้าเอาทั้งสองเป็น 'eng+tha'
       text = pytesseract.image_to_string(img, lang='tha')  # ใช้ภาษาไทย
       print(text)
